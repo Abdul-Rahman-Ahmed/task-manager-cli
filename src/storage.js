@@ -4,8 +4,8 @@ import path from "node:path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const tasksFile = path.join(__dirname, "..", "tasks.json");
+
 export async function saveTasks(tasks) {
   const stringTasks = JSON.stringify(tasks, null, 2);
   await writeFile(tasksFile, stringTasks);
