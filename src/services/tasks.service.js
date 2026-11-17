@@ -136,7 +136,7 @@ export async function editTaskService(id, body) {
   }
 
   if (Object.hasOwn(body, "completed") && typeof body.completed !== "boolean") {
-    const error = new Error("completed must to be a boolean");
+    const error = new Error("completed must be a boolean");
     error.statusCode = 400;
     throw error;
   }
